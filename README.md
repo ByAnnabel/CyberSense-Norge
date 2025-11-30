@@ -1,127 +1,118 @@
 🛡️ CyberSense Norge
+
 AI-drevet simulator for digitale krisehendelser i Norge
 
-CyberSense Norge er et fullstack-system som simulerer cyberangrep, kritiske systemfeil og infrastrukturhendelser i sanntid.
-Prosjektet inkluderer backend (FastAPI) og frontend (React + Vite), og demonstrerer evne til å bygge komplette, moderne systemer fra ende til ende.
+CyberSense Norge er et fullstack-system som simulerer cyberangrep, systemfeil og infrastrukturhendelser i sanntid. Prosjektet inkluderer backend (FastAPI) og frontend (React + Vite), og demonstrerer ferdigheter innen moderne webutvikling, API-design, real-time data, og AI-generert situasjonsanalyse.
+
 
 🚀 Hovedfunksjoner
 🔥 Cyberangrep-simulator
-
 Simulerer realistiske hendelser som:
-
-DDoS
-
+DDoS-angrep
 Ransomware
-
 Systemsvikt
-
 Datainnbrudd
-
 Desinformasjon
 
-Hendelser genereres med alvorlighetsgrad, tidsstempel, mål og beskrivelse.
+Hver hendelse får:
+alvorlighetsgrad
+tidsstempel
+rammede systemer
+geografisk lokasjon
+generert beskrivelse
 
-🧠 AI-drevet analyse
-
+🧠 AI-drevet analyse (Gemini 2.0)
 Automatisk generert:
-
-risikoanalyse
-
-tiltak
-
-vurdering av spredningsfare
-
-tekstlig forklaring basert på hendelsens type
+Risikoanalyse
+Tiltak og anbefalinger
+Vurdering av spredningsfare
+Tekstlig situasjonsforklaring
 
 📊 Interaktivt dashboard
-
 Frontend viser:
-
 aktive hendelser
-
 historikk
+rammede systemer
+kritikalitet
+AI-generert rådgivning
+live logs
 
-systemer som er rammet
-
-status
-
-AI-rådgiver
-
-live feed
-
-🧩 Teknologistack
-
-Backend
-
+🗂️ Teknologi brukt
+Backend:
 FastAPI
-
-Python
-
-SQLAlchemy
-
+ByAnnabel / OpenAPI
+Python 3.11
 Uvicorn
+Virtualenv
 
-Frontend
-
+Frontend:
 React
-
 Vite
-
-Tailwind
-
-Zustand
-
+TailwindCSS
 Axios
+Zustand (state management)
 
-⚙️ Starte backend
+📁 Mappestruktur
+CyberSense-Norge/
+│── backend/
+│   ├── app/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── venv/
+│
+│── frontend/
+│   └── cybersense-norge/
+│       ├── src/
+│       ├── components/
+│       ├── pages/
+│       └── package.json
+│
+└── README.md
+
+⚙️ Installasjon & Oppstart
+🔧 1. Start backend
 cd backend
-python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
-python3 -m uvicorn app.main:app --reload
+uvicorn app.main:app --reload
 
 
-Backend tilgjengelig på:
+Backend kjører på:
 👉 http://127.0.0.1:8000
 
+Docs:
 👉 http://127.0.0.1:8000/docs
 
-🖥️ Starte frontend
+🖥️ 2. Start frontend
 cd frontend/cybersense-norge
 npm install
 npm run dev
 
 
-Frontend tilgjengelig på:
+Frontend kjører på:
 👉 http://localhost:3000
-
-📁 Prosjektstruktur
-CyberSense-Norge/
-│
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── schemas/
-│   ├── venv/
-│   ├── requirements.txt
-│   └── .env (ikke inkludert)
-│
-└── frontend/
-    └── cybersense-norge/
-        ├── src/
-        ├── components/
-        ├── pages/
-        ├── assets/
-        └── package.json
 
 🧪 API-endepunkter
 Metode	Endpoint	Beskrivelse
-POST	/api/incidents/simulate?count=3	Simuler nye hendelser
-GET	/api/incidents/active	Hent aktive hendelser
-GET	/api/incidents/history	Hendelseshistorikk
-POST	/api/incidents/{id}/resolve	Marker hendelse som løst
-GET	/api/incidents/{id}/advice	Hent AI-analyse
+POST	/api/incidents/simulate	Simuler nye hendelser
+GET	/api/incidents/active	Aktive hendelser
+GET	/api/incidents/history	Historikk
+POST	/api/incidents/{id}/resolve	Løs hendelse
+GET	/api/incidents/{id}/advice	AI-analyse
 POST	/api/assets	Opprett nytt asset
-GET	/api/assets	Hent alle registrerte assets
+GET	/api/assets	Liste over assets
+
+
+📸 Skjermbilder
+<img width="1275" height="702" alt="Skjermbilde 2025-11-30 kl  03 03 48" src="https://github.com/user-attachments/assets/a8ba9c1a-52af-41d5-88cf-c1f638c2c90a" />
+<img width="315" height="709" alt="Skjermbilde 2025-11-30 kl  03 04 39" src="https://github.com/user-attachments/assets/307d911a-f12d-463b-9832-eb7d4f55bd1a" />
+<img width="903" height="357" alt="Skjermbilde 2025-11-30 kl  03 05 03" src="https://github.com/user-attachments/assets/bbd9bdc3-7e32-4d3a-ac87-a85bfcec79f3" />
+<img width="897" height="311" alt="Skjermbilde 2025-11-30 kl  03 05 14" src="https://github.com/user-attachments/assets/a78a40da-fda8-4d2c-bd43-7b89e3339248" />
+
+
+
+📄 Lisens
+MIT License
+
+📬 Kontakt
+ByAnnabel
+Github: https://github.com/ByAnnabel
