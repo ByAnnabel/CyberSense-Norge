@@ -2,15 +2,12 @@
 AI-drevet simulator for digitale krisehendelser i Norge
 
 CyberSense Norge er et fullstack-system som simulerer cyberangrep, kritiske systemfeil og infrastrukturhendelser i sanntid.
-Prosjektet inkluderer både backend (FastAPI) og frontend (React + Vite), og demonstrerer evne til å bygge komplette, moderne IT-systemer fra ende til ende.
-
-Dette prosjektet viser ferdigheter innen fullstack-utvikling, API-design, systemarkitektur, sikkerhetssimulering og AI-integrasjon.
-
+Prosjektet inkluderer backend (FastAPI) og frontend (React + Vite), og demonstrerer evne til å bygge komplette, moderne systemer fra ende til ende.
 
 🚀 Hovedfunksjoner
 🔥 Cyberangrep-simulator
 
-Simulerer realistiske digitale hendelser som:
+Simulerer realistiske hendelser som:
 
 DDoS
 
@@ -22,62 +19,47 @@ Datainnbrudd
 
 Desinformasjon
 
-Hver hendelse kobles til et asset i databasen med:
-
-alvorlighetsgrad
-
-tidsstempel
-
-mål
-
-beskrivelse
-
-status
+Hendelser genereres med alvorlighetsgrad, tidsstempel, mål og beskrivelse.
 
 🧠 AI-drevet analyse
 
-Genererer automatisk:
+Automatisk generert:
 
 risikoanalyse
 
-beskrivelse av hendelsen
-
 tiltak
 
-vurdering av mulig påvirkning
+vurdering av spredningsfare
+
+tekstlig forklaring basert på hendelsens type
 
 📊 Interaktivt dashboard
 
-Frontend-appen viser:
+Frontend viser:
 
 aktive hendelser
 
 historikk
 
-systemer/assets
+systemer som er rammet
 
-løste hendelser
+status
 
-AI-analyse
+AI-rådgiver
 
-hendelseslogg
-
-Alt oppdateres i sanntid når backend kjører.
+live feed
 
 🧩 Teknologistack
-Backend
 
-Python 3.x
+Backend
 
 FastAPI
 
+Python
+
 SQLAlchemy
 
-Pydantic
-
 Uvicorn
-
-SQLite
 
 Frontend
 
@@ -85,50 +67,17 @@ React
 
 Vite
 
-Tailwind CSS
-
-Axios
+Tailwind
 
 Zustand
 
-Verktøy
-
-Git & GitHub
-
-Node.js & npm
-
-Python venv
-
-📦 Klone prosjektet
-git clone https://github.com/ByAnnabel/CyberSense-Norge.git
-cd CyberSense-Norge
-
-
-Prosjektstruktur:
-
-/backend   → FastAPI-server
-/frontend  → React + Vite-klient
+Axios
 
 ⚙️ Starte backend
-
-Gå inn i backend-mappen:
-
 cd backend
-
-
-Opprett virtuelt miljø:
-
 python3 -m venv venv
 source venv/bin/activate
-
-
-Installer avhengigheter:
-
 pip install -r requirements.txt
-
-
-Start backend-serveren:
-
 python3 -m uvicorn app.main:app --reload
 
 
@@ -138,19 +87,8 @@ Backend tilgjengelig på:
 👉 http://127.0.0.1:8000/docs
 
 🖥️ Starte frontend
-
-Gå til frontend-klienten:
-
-cd ../frontend/cybersense-norge
-
-
-Installer pakker:
-
+cd frontend/cybersense-norge
 npm install
-
-
-Start utviklingsserver:
-
 npm run dev
 
 
@@ -159,27 +97,31 @@ Frontend tilgjengelig på:
 
 📁 Prosjektstruktur
 CyberSense-Norge/
-│── backend/
+│
+├── backend/
 │   ├── app/
+│   │   ├── main.py
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── schemas/
 │   ├── venv/
 │   ├── requirements.txt
-│   └── main setup
+│   └── .env (ikke inkludert)
 │
-│── frontend/
-│   └── cybersense-norge/
-│       ├── src/
-│       ├── components/
-│       ├── pages/
-│       └── package.json
-│
-└── README.md
+└── frontend/
+    └── cybersense-norge/
+        ├── src/
+        ├── components/
+        ├── pages/
+        ├── assets/
+        └── package.json
 
 🧪 API-endepunkter
 Metode	Endpoint	Beskrivelse
 POST	/api/incidents/simulate?count=3	Simuler nye hendelser
-GET	/api/incidents/active	Aktive hendelser
-GET	/api/incidents/history	Historikk
-POST	/api/incidents/{id}/resolve	Løs hendelse
-GET	/api/incidents/{id}/advice	AI-analyse
+GET	/api/incidents/active	Hent aktive hendelser
+GET	/api/incidents/history	Hendelseshistorikk
+POST	/api/incidents/{id}/resolve	Marker hendelse som løst
+GET	/api/incidents/{id}/advice	Hent AI-analyse
 POST	/api/assets	Opprett nytt asset
-GET	/api/assets	Liste over assets
+GET	/api/assets	Hent alle registrerte assets
