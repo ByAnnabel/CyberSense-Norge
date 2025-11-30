@@ -2,133 +2,118 @@
 
 AI-drevet simulator for digitale krisehendelser i Norge.
 
-CyberSense Norge er et fullstack-prosjekt som simulerer cyberangrep, kritiske systemfeil og infrastrukturhendelser i sanntid. Dashbordet gir oversikt over aktive hendelser, rammede systemer, alvorlighetsgrad, tidslinjer og AI-generert situasjonsvurdering via Gemini.
+CyberSense Norge er et fullstack-prosjekt som simulerer cyberangrep, systemfeil og kritiske infrastrukturhendelser i sanntid. Dashbordet visualiserer aktive hendelser, rammede systemer, alvorlighetsgrad, tidslinjer og AI-generert analyse.
 
-Prosjektet er designet for portefølje og demonstrerer ferdigheter innen:
+Prosjektet viser ferdigheter innen:
 
 Backend/API-utvikling (FastAPI)
 
 Frontend-utvikling (React + Vite)
 
-Real-time simulering
+Databasehåndtering (SQLAlchemy)
 
-Fullstack-struktur
+Systemdesign og real-time simulering
 
-Systemdesign og UI/UX for sikkerhetsoperasjoner
+Full lokal utviklingspipeline
+
+AI-analyse via integrert modell
 
 🚀 Funksjoner
+🔥 Cyberangrep-simulator
 
-Simulering av cyberangrep (DDoS, ransomware, desinformasjon m.m.)
+Simulerer hendelser som:
 
-Realtids-oppdateringer i dashboard
+DDoS
 
-Hendelseslogg
+Ransomware
 
-Systemstatus og rammede noder
+Systemfeil
 
-AI-genererte analyser basert på hendelsene
+Desinformasjon
 
-Full API-dokumentasjon via /OpenAPI
+Hver hendelse kobles til et definert system/asset, med region og alvorlighet.
 
-Norsk språk, tilpasset offentlig og privat sektor
+🧠 Innebygget AI-analyse
 
-🧩 Teknologier
-Backend
+Genererer automatisk:
 
-Python 3.11
+Situasjonsforståelse
+
+Risikovurdering
+
+Tiltaksforslag
+
+📊 Dashbord i sanntid
+
+Gir oversikt over:
+
+Aktive hendelser
+
+Historikk
+
+Rammede systemer
+
+Beskrivelser og status
+
+Live hendelseslogg
+
+⚙️ API-endepunkter
+
+Klare og strukturerte routes som håndterer:
+
+Assets
+
+Hendelser
+
+Simulering
+
+Løsning av hendelser
+
+AI-basert råd
+
+🛠️ Teknologier
+
+Backend:
+
+Python
 
 FastAPI
 
-Uvicorn
+SQLAlchemy
 
 Pydantic
 
-CORS + REST API-struktur
+Uvicorn
 
-Frontend
+Frontend:
 
-React (Vite)
+React
 
-TailwindCSS
+Vite
+
+Tailwind CSS
 
 Axios
 
-Zustand (state)
-
-Full dark-mode dashboard
-
-📦 Installer og kjør prosjektet lokalt
-1. Klon repoet
+💻 Lokal kjøring
+1. Klon prosjektet:
 git clone https://github.com/ByAnnabel/CyberSense-Norge.git
 cd CyberSense-Norge
 
-⚙️ Start backend
+2. Start backend:
 cd backend
-python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
-python3 -m uvicorn app.main:app --reload
+uvicorn app.main:app --reload
 
 
-Backend kjører nå på:
-
+Backend kjører på:
 👉 http://127.0.0.1:8000
 
-👉 Docs: http://127.0.0.1:8000/docs
-
-🖥️ Start frontend
-cd frontend/cybersense-norge
+3. Start frontend:
+cd ../frontend
 npm install
 npm run dev
 
 
-Frontend åpnes på:
-👉 http://localhost:3000/
-
-🧪 API-endepunkter
-
-GET /api/incidents/active
-
-GET /api/incidents/history
-
-POST /api/incidents/simulate?count=3
-
-POST /api/incidents/{id}/resolve
-
-GET /api/incidents/{id}/advice
-
-POST /api/assets – opprett nye systemer
-
-Full dokumentasjon: http://127.0.0.1:8000/docs
-
-📁 Prosjektstruktur
-CyberSense-Norge/
-│── backend/
-│   ├── app/
-│   ├── models/
-│   ├── routes/
-│   └── main.py
-│
-│── frontend/
-│   └── cybersense-norge/
-│       ├── src/
-│       ├── components/
-│       └── pages/
-│
-└── LICENSE
-
-📜 Lisens
-
-MIT-lisens. Fri bruk og modifikasjon.
-
-🧠 Formål
-
-Dette prosjektet er utviklet som en del av min portefølje for å vise:
-
-evne til å bygge komplette fullstack-systemer
-
-kompetanse innen sikkerhet & simuleringer
-
-moderne UI-design
-
-integrasjon av AI i operative dashboards
+Frontend kjører på:
+👉 http://localhost:3000
