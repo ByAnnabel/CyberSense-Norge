@@ -104,9 +104,9 @@ GET	/api/assets	Liste over assets
 
 📸 Skjermbilder
 <img width="1275" height="702" alt="Skjermbilde 2025-11-30 kl  03 03 48" src="https://github.com/user-attachments/assets/a8ba9c1a-52af-41d5-88cf-c1f638c2c90a" />
-<img width="315" height="709" alt="Skjermbilde 2025-11-30 kl  03 04 39" src="https://github.com/user-attachments/assets/307d911a-f12d-463b-9832-eb7d4f55bd1a" />
 <img width="897" height="311" alt="Skjermbilde 2025-11-30 kl  03 05 14" src="https://github.com/user-attachments/assets/a78a40da-fda8-4d2c-bd43-7b89e3339248" />
 <img width="903" height="357" alt="Skjermbilde 2025-11-30 kl  03 05 03" src="https://github.com/user-attachments/assets/bbd9bdc3-7e32-4d3a-ac87-a85bfcec79f3" />
+<img width="315" height="709" alt="Skjermbilde 2025-11-30 kl  03 04 39" src="https://github.com/user-attachments/assets/307d911a-f12d-463b-9832-eb7d4f55bd1a" />
 
 
 📄 Lisens
